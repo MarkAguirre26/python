@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    {% include "myStyle.html" %}
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-4">
+
+            <form id="_form">
+                <div class="form-group">
+                    <label >Car Color</label>
+                    <select class="form-control" name="cbo_color">
+                        <option>RED</option>
+                        <option>GREEN</option>
+                        <option>BLACK</option>
+                        <option>YELLOW</option>
+                        <option>BLUE</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text"  class="form-control" name="name">
+                </div>
+                <button  id="cmd_save" class="btn btn-default">Save</button>
+            </form>
+
+        </div>
+        <div class="col-lg-8" style="margin-top: 20px">
+            <div class="col-lg-2"><a href="javascript:void(0)" class="aaf" id="BLACK" ><img  src="{{ url_for('static',filename='images/black_car.png') }}"/></a> </div>
+            <div class="col-lg-2"><a href="#"><img src="{{ url_for('static',filename='images/blue_car.png') }}"/></a> </div>
+            <div class="col-lg-2"><a href="#"><img src="{{ url_for('static',filename='images/green_car.png') }}"/></a> </div>
+            <div class="col-lg-2"><a href="#"><img src="{{ url_for('static',filename='images/red_car.png') }}"/></a> </div>
+            <div class="col-lg-2"><a href="#"><img src="{{ url_for('static',filename='images/yellow_car.png') }}"/></a> </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    List of Reports
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <table id="listtable" class="display" cellspacing="0" width="100%" ></table>
+                    <!-- /.table-responsive -->
+
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+</div>
+
+<!-- Modal -->
+
+
+
+<script src="{{ url_for('static',filename='js/jquery-1.10.2.js') }}"></script>
+<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
+<script src="{{ url_for('static',filename='js/plugins/dataTables/jquery.dataTables.js') }}"></script>
+<script src="{{ url_for('static',filename='js/plugins/dataTables/dataTables.bootstrap.js') }}"></script>
+
+{{ flask_util_js.js }}
+<script src="{{ url_for('static',filename='js/custom/js_index_info.js') }}"></script>
+</body>
+
+</html>
